@@ -1,0 +1,307 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<!-- Hero Section -->
+<div class="hero-about">
+  <div class="hero-text">
+    <h1 class="display-4 fw-bold fade-in">About Me</h1>
+    <p class="lead fade-in delay-1">
+      Learn more about my journey, skills, and experiences.
+    </p>
+  </div>
+</div>
+
+<!-- About Section -->
+<div class="container my-5 about-section">
+  <div class="row align-items-center">
+    <div class="col-md-4 text-center mb-4">
+      <img
+        src="{% static 'img/self.jpg' %}"
+        class="img-fluid rounded-circle profile-pic scale-in"
+        alt="Profile"
+      />
+    </div>
+    <div class="col-md-8">
+      <h2 class="mb-3 fw-bold fade-in">I'm Rakesh Kumar</h2>
+      <p class="text-muted fade-in delay-1">
+        A passionate Full Stack Developer and AI Enthusiast, always exploring
+        the frontier of technology. I love crafting scalable web apps using
+        Django and React, fine-tuning databases, and solving real-world
+        challenges.
+      </p>
+      <p class="text-muted fade-in delay-2">
+        My journey revolves around coding, building smart ML models, and
+        creating seamless user experiences. Constantly curious, I thrive on
+        learning, innovating, and delivering excellence.
+      </p>
+      <p class="text-muted fade-in delay-3">
+        <strong>Tech Stack:</strong> Python, Django, JavaScript, SQL, AI, Cloud.
+        Let's build the future!
+      </p>
+      <p class="fade-in delay-4">
+        <strong>Hobbies & Interests:</strong> Investing, Volleyball, Cooking,
+        Badminton
+      </p>
+      <p class="fade-in delay-5"><strong>Languages:</strong> English, Hindi</p>
+
+      <!-- Social Links -->
+      <div class="social-links mt-3 fade-in delay-6">
+        <a href="https://github.com/krakesh1309" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/rakesh-kumar-4a509a212"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:sprakesh4114@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://leetcode.com/u/jahar_48/" target="_blank">LeetCode</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Skills Section -->
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold fade-in">My Skills</h2>
+  <div class="row">
+    {% for skill, percent in skills %}
+    <div class="col-md-6 mb-3 skill-item fade-in delay-{{ forloop.counter }}">
+      <p class="mb-1 fw-bold">{{ skill }}</p>
+      <div class="progress">
+        <div class="progress-bar" style="width: {{ percent }}%;">
+          {{ percent }}%
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- Training & Education -->
+<div class="container my-5">
+  <h2 class="text-center mb-4 fw-bold fade-in">Training & Education</h2>
+  <div class="timeline">
+    <div class="timeline-item fade-in delay-1">
+      <h4>Full Stack Developer Training - Pyspider, Bangalore</h4>
+      <p>Sep 2024 - 2025</p>
+    </div>
+    <div class="timeline-item fade-in delay-2">
+      <h3>Bihar Engineering University</h3>
+      <h4>Darbhanga College of Engineering</h4>
+      <p>2020 - 2024</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer mt-5 py-3 bg-dark text-white text-center">
+  <div class="container">
+    <p class="mb-0 fade-in">&copy; 2025 Rakesh Kumar | All Rights Reserved</p>
+    <p class="fade-in delay-1">
+      Follow me on:
+      <a
+        href="https://github.com/krakesh1309"
+        target="_blank"
+        class="text-white mx-2"
+        >GitHub</a
+      >
+      |
+      <a
+        href="https://www.linkedin.com/in/rakesh-kumar-4a509a212"
+        target="_blank"
+        class="text-white mx-2"
+        >LinkedIn</a
+      >
+    </p>
+  </div>
+</footer>
+
+<!-- Custom Styles -->
+<style>
+  /* Hero Section */
+  .hero-about {
+    height: 50vh;
+    background: linear-gradient(
+        90deg,
+        rgba(0, 123, 255, 0.7),
+        rgba(0, 0, 0, 0.7)
+      ),
+      url("{% static 'img/about.png' %}") no-repeat center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+  }
+
+  /* Profile Picture */
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #007bff;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+
+  /* Social Links */
+  .social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+    transition: transform 0.3s, color 0.3s;
+  }
+
+  .social-links a:hover {
+    transform: scale(1.2);
+    color: #007bff;
+  }
+
+  /* Progress Bar */
+  .progress {
+    height: 10px;
+    border-radius: 5px;
+    background: #e9ecef;
+    overflow: hidden;
+  }
+
+  .progress-bar {
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    transition: width 1s ease-in-out;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: #007bff;
+    animation: slideIn 1s ease-in-out;
+  }
+
+  .timeline-item {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: #007bff;
+    border-radius: 50%;
+    border: 3px solid white;
+  }
+
+  /* Footer */
+  .footer {
+    background: #222;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      height: 0;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.9s;
+  }
+
+  .delay-4 {
+    animation-delay: 1.2s;
+  }
+
+  .delay-5 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-6 {
+    animation-delay: 1.8s;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .scale-in {
+    animation: scaleIn 0.5s ease-in-out forwards;
+  }
+</style>
+{% endblock %}

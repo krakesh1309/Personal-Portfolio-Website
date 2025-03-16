@@ -1,0 +1,136 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container mt-5">
+  <h1 class="text-center display-4 fw-bold fade-in">
+    Let's Build Something Great Together!
+  </h1>
+  <p class="text-center fade-in delay-1">
+    Feel free to reach out for collaborations, inquiries, or just a friendly
+    chat.
+  </p>
+
+  <div class="row mt-4">
+    <!-- Contact Form -->
+    <div class="col-md-6">
+      <div class="contact-form fade-in">
+        <form action="{% url 'contact' %}" method="post">
+          {% csrf_token %}
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Your Message</label>
+            <textarea
+              class="form-control"
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Write your message..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Contact Details -->
+    <div class="col-md-6">
+      <div class="contact-info fade-in delay-2">
+        <h3>Contact Information</h3>
+        <p><strong>Email:</strong> sprakesh4114@gmail.com</p>
+        <p><strong>Phone:</strong> +91 7991172724</p>
+        <h4>Follow Me</h4>
+        <div class="social-icons">
+          <a
+            href="https://www.linkedin.com/in/rakesh-kumar-4a509a212"
+            class="social-icon"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a
+            href="https://github.com/krakesh1309"
+            class="social-icon"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+          <a
+            href="https://x.com/Rak_sh_1309?t=ndC9LR11436CTwrI2bOE0g&s=09"
+            class="social-icon"
+            target="_blank"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Additional Styles -->
+<style>
+  .contact-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 10px;
+    font-size: 24px;
+    transition: 0.3s;
+    color: inherit;
+  }
+
+  .social-icons a:hover {
+    transform: scale(1.2);
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.5s;
+  }
+  .delay-2 {
+    animation-delay: 1s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,291 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+<div class="container mt-5">
+  <h1 class="text-center display-4 fw-bold fade-in">My Projects</h1>
+  <p class="text-center fade-in delay-1">
+    A showcase of my most exciting work, blending AI, Full Stack Development,
+    and Data Analytics.
+  </p>
+
+  <div class="row mt-4">
+    <!-- Spam Detection REST API -->
+    <div class="col-md-6">
+      <div class="project-card fade-in">
+        <img
+          src="{% static 'img/spam.jpeg' %}"
+          alt="Spam Detection REST API"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">Spam Detection REST API</h3>
+          <p>
+            This project implements a REST API for a spam detection application,
+            designed to be seamlessly consumed by a mobile app. It facilitates
+            user profile management, spam reporting, and advanced search
+            functionality, providing details such as spam likelihood.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, Django, Relational Database,
+            REST Architecture
+          </p>
+          <a
+            href="https://github.com/krakesh1309/Spam_Detection"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Personal-Portfolio-Website -->
+    <div class="col-md-6">
+      <div class="project-card fade-in delay-2">
+        <img
+          src="{% static 'img/port.jpg' %}"
+          alt="Personal Portfolio Website"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">Personal-Portfolio-Website</h3>
+          <p>
+            A Personal Portfolio Website serves as an individual's digital
+            résumé, showcasing their skills, projects, and achievements to
+            create a professional online presence.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, Django, JavaScript, HTML, CSS
+          </p>
+          <a
+            href="https://github.com/krakesh1309/Personal-Portfolio-Website"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- BMW Clone Website -->
+    <div class="col-md-6">
+      <div class="project-card fade-in delay-3">
+        <img
+          src="{% static 'img/bmw.png' %}"
+          alt="BMW Clone Website"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">BMW Clone Website</h3>
+          <p>
+            The BMW Clone Website is a fully responsive and visually stunning
+            static website built entirely with HTML and CSS. It mimics the
+            official BMW website's appearance, delivering an engaging user
+            experience using advanced design techniques, animations, and
+            effects—all achieved without the use of JavaScript or external
+            frameworks.
+          </p>
+          <p><strong>Tech Stack:</strong> HTML, CSS</p>
+          <a
+            href="https://github.com/krakesh1309/BMW_Clone_Website"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Customer Retention Prediction -->
+    <div class="col-md-6">
+      <div class="project-card fade-in delay-4">
+        <img
+          src="{% static 'img/bank.png' %}"
+          alt="Customer Retention Prediction"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">
+            Customer Retention Prediction using Neural Network
+          </h3>
+          <p>
+            This project focuses on predicting whether a customer will stay with
+            a bank or leave (churn) using a neural network. The model utilizes
+            customer data to identify patterns and factors influencing
+            retention, providing valuable insights for strategic
+            decision-making.
+          </p>
+          <p>
+            <strong>Machine Learning Algorithms:</strong> ANN, Backpropagation
+          </p>
+          <p><strong>Tech Stack:</strong> Python, TensorFlow, Pandas, NumPy</p>
+          <a
+            href="https://github.com/krakesh1309/Neural-Network"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Dummy JSON API -->
+    <div class="col-md-6">
+      <div class="project-card fade-in delay-5">
+        <img
+          src="{% static 'img/json.jpeg' %}"
+          alt="Dummy JSON API"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">Dummy JSON API Fetching and Manipulation</h3>
+          <p>
+            This Django project demonstrates how to fetch and manipulate dummy
+            JSON data from external sources. It is divided into three distinct
+            Django applications: Carts, Recipes, and Products, each handling its
+            own JSON file and rendering data through templates.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Python, Django, REST API, HTML, CSS
+          </p>
+          <a
+            href="https://github.com/krakesh1309/Dummy-JSON-API-Fetching-Application-and-Manipulation"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Analysis by Seaborn -->
+    <div class="col-md-6">
+      <div class="project-card fade-in delay-6">
+        <img
+          src="{% static 'img/seaborn.jpeg' %}"
+          alt="Analysis by Seaborn"
+          class="project-img"
+        />
+        <div class="project-content">
+          <h3 class="fw-bold">Analysis by Seaborn</h3>
+          <p>
+            Seaborn is a powerful Python library built on Matplotlib for
+            creating attractive and informative statistical graphics. It
+            simplifies data visualization with its high-level interface and
+            integrates seamlessly with Pandas for efficient data exploration.
+          </p>
+          <p>
+            <strong>Tech Stack:</strong> Line Plot, Bar Plot, Histogram, Scatter
+            Plot, Heatmap, Count Plot, Violin Plot, Pair Plot
+          </p>
+          <a
+            href="https://github.com/krakesh1309/analysis_by_seaborn"
+            target="_blank"
+            class="btn btn-primary"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Project Card Styling */
+  .project-card {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 30px;
+  }
+
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .project-card:hover .project-img {
+    opacity: 0.8;
+  }
+
+  .project-content {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Animations */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+  }
+
+  .delay-1 {
+    animation-delay: 0.3s;
+  }
+
+  .delay-2 {
+    animation-delay: 0.6s;
+  }
+
+  .delay-3 {
+    animation-delay: 0.9s;
+  }
+
+  .delay-4 {
+    animation-delay: 1.2s;
+  }
+
+  .delay-5 {
+    animation-delay: 1.5s;
+  }
+
+  .delay-6 {
+    animation-delay: 1.8s;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Additional Animations */
+  @keyframes scaleIn {
+    from {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .scale-in {
+    animation: scaleIn 0.5s ease-in-out forwards;
+  }
+
+  /* Button Animation */
+  .btn-primary {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+</style>
+{% endblock %}
